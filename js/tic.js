@@ -1,16 +1,40 @@
 $(document).ready(function () { 
 
-    const gameboard = [
-        [$('.box1'),$('.box2'), $('.box3')],
-        [$('.box4'), $('.box5'), $('.box6')],
-        [$('.box7'), $('.box8'), $('.box9')]
-    ];
+const playerX = 'X';
+const playerO = 'O';
+let playerOTurn = false;
 
-    $('.box1').on('click', function () {
+const winningCombinations = [
+    [0,1,2],
+    [3,4,5],
+    [6,7,8],
+    [0,3,6],
+    [1,4,7],
+    [2,5,8],
+    [0,4,8],
+    [2,4,6]
+];
+
+const gameboard = [
+    [$('#0'),$('#1'), $('#2')],
+    [$('#3'), $('#4'), $('#5')],
+    [$('#6'), $('#7'), $('#8')]
+];
+
+$('.box').on('click', function () { // applies to all box, but will choose specific box
+    if (playerOTurn === true) {
+        $( this ).text("0").css('font-size', '800%');
+        playerOTurn = false;
+    } else {
         $( this ).text("X").css('font-size', '800%');
-    })
+        playerOTurn = true;
+    }
+    
+})
 
 });
+
+
 
 // $('.square').on('click', function () {
 //     $( this ).append('<div class="nought"></div>');
