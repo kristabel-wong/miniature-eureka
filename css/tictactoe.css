@@ -52,7 +52,7 @@ div {
     line-height: 60px;
 }
 
-.restart {
+.playAgain {
     margin: 0 auto;
     width: 200px;
     height: 80px;
@@ -69,3 +69,28 @@ div {
     margin: 10px
 }
 
+.scoreboard {
+    box-sizing: border-box;
+    position: absolute;
+    top: 350px;
+    left: 300px;
+    height: 130px;
+    width: 200px;
+    border: 5px solid black;
+    display: grid;
+}
+
+.score {
+    box-sizing: border-box;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.restart {
+    height: 50px;
+    width: 80px;
+    position: relative;
+    top: 30px;
+}
