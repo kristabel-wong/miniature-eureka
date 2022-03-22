@@ -43,14 +43,21 @@ $('.box').on('click', function () { // applies to all box, but will choose speci
             if ($(`#${a}`).text() === "O" && $(`#${b}`).text() === "O" && $(`#${c}`).text() === "O") { // if the text of the id box matches
                 console.log('Player O Wins');
                 $('.winning_text').text('Player O Wins');
+            } 
+        } 
+        let string = ""; 
+        for (let i = 0; i < 9; i++) { // number of boxes. If all boxes are full and there has been no winner announced, then its a draw!
+            string += $(`#${i}`).text();
+            if ( string.length === 9) {
+                console.log("It's a Draw!");
+                $('.winning_text').text("It's a Draw!");
             }
         }
     }
     
     checkForWin();
-    
+   
 })
-
 
 const winningCombos = [
     [0,1,2],
@@ -62,6 +69,10 @@ const winningCombos = [
     [0,4,8],
     [2,4,6]
 ];
+
+$('.restart').on('click', function () {
+    $('.box').empty();
+})
 
 
 
