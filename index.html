@@ -31,18 +31,23 @@
 
     </div>
 
-    <aside class="scoreboard">
-        <div class="score" id="playerX"></div>
-        <div class="score" id="draw"></div>
-        <div class="score" id="playerO"></div>
-        <button class="restart">Restart</button>
-    </aside> 
-
     <div class="winning_message">
         <div class="winning_text"></div>
         <button class="playAgain">Play Again</button>
     </div>
+    
+    <!-- for some reason i cannot put the scoreboard above the winning message as it screws with positioning...  -->
 
+    <aside class="scoreboard">
+        <div class="container">
+            <h1>Scoreboard</h1>
+            <div class="score" id="playerX"></div>
+            <div class="score" id="draw"></div>
+            <div class="score" id="playerO"></div>
+        </div>
+        
+        <button class="restart">Restart</button>
+    </aside> 
 
 </body>
 </html>
