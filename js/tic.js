@@ -3,11 +3,11 @@ $(document).ready(function () {
 let playerOTurn;
 
 let scoresX = 0;
-$('#playerX').text(`Player X scores: ${scoresX}`);
+$('#playerX').text(`${scoresX}`);
 let scoresO = 0;
-$('#playerO').text(`Player O scores: ${scoresO}`);
+$('#playerO').text(`${scoresO}`);
 let draw = 0;
-$('#draw').text(`Draws: ${draw}`);
+$('#draw').text(`${draw}`);
 
 $('#X').on('click', function () {
     
@@ -54,7 +54,7 @@ $('.box').on('click', function () { // applies to all box, but will choose speci
             if ($(`#${a}`).text() === "X" && $(`#${b}`).text() === "X" && $(`#${c}`).text() === "X" && $('.winning_text').text() === "") { // if the text of the id box matches
                 console.log('Player X Wins');
                 scoresX +=1;
-                $('#playerX').text(`Player X scores: ${scoresX}`);
+                $('#playerX').text(`${scoresX}`);
                 $('.winning_text').text('Player X Wins');
             }
     
@@ -67,7 +67,7 @@ $('.box').on('click', function () { // applies to all box, but will choose speci
             if ($(`#${a}`).text() === "O" && $(`#${b}`).text() === "O" && $(`#${c}`).text() === "O" && $('.winning_text').text() === "") { // if the text of the id box matches
                 console.log('Player O Wins');
                 scoresO +=1;
-                $('#playerO').text(`Player O scores: ${scoresO}`);
+                $('#playerO').text(`${scoresO}`);
                 $('.winning_text').text('Player O Wins');
             } 
         } 
@@ -77,7 +77,7 @@ $('.box').on('click', function () { // applies to all box, but will choose speci
             if ( string.length === 9 && $('.winning_text').text() === "") {
                 console.log("It's a Draw!");
                 draw += 1;
-                $('#draw').text(`Draws: ${draw}`);
+                $('#draw').text(`${draw}`);
                 $('.winning_text').text("It's a Draw!");
             }
         }
@@ -106,11 +106,11 @@ $('.playAgain').on('click', function () {
 
 $('.restart').on('click', function () {
     let scoresX = 0;
-    $('#playerX').text(`Player X scores: ${scoresX}`);
+    $('#playerX').text(`${scoresX}`);
     let scoresO = 0;
-    $('#playerO').text(`Player O scores: ${scoresO}`);
+    $('#playerO').text(`${scoresO}`);
     let draw = 0;
-    $('#draw').text(`Draws: ${draw}`);
+    $('#draw').text(`${draw}`);
 
     $('.box').empty();
     $('.winning_text').empty();
@@ -120,5 +120,4 @@ $('.restart').on('click', function () {
 
 
 });
-
 
