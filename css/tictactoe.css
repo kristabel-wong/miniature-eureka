@@ -92,6 +92,10 @@
     border: solid white;
 }
 
+.playAgain1:active, .reset1:active {
+    box-shadow: 1px 3px rgb(255, 255, 255);
+    transform: translateY(4px);
+}
 
 
   /* -------------------------------------------  */
@@ -137,6 +141,7 @@ h1, h2 {
 #X {
     font-size: 400%;
 }
+
 
 #player2 {
     float: right;
@@ -258,7 +263,14 @@ h1, h2 {
     height: 50px;
     float: left;
     border: solid grey;
+    background-color: white;
 }
+
+.playAgain:active, .reset:active {
+    box-shadow: 1px 3px #666;
+    transform: translateY(4px);
+}
+
 
 .reset {
     margin: 0 auto;
@@ -273,3 +285,4 @@ button {
     font-weight: 500;
     background-color: white;
 }
+
