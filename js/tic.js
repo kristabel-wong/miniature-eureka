@@ -9,15 +9,15 @@ $('#playerO').text(`${scoresO}`);
 let draw = 0;
 $('#draw').text(`${draw}`);
 
-$('#X').on('click', function () {
+$('#X').on('click', function () { // choosing player token
     
-    if ( $('.box').text() === "") { // if the grid is empty player can be order can be chosen. This way, it cannot be changed half way through
+    if ( $('.box').text() === "") { // if the grid is empty, player token can be chosen. This way, it cannot be changed half way through
         playerOTurn = false;
     }
     
 })
 
-$('#O').on('click', function () {
+$('#O').on('click', function () { // choosing player token
     
     if ( $('.box').text() === "") {
         playerOTurn = true;
@@ -56,8 +56,8 @@ $('.box').on('click', function () { // applies to all box, but will choose speci
                 scoresX +=1;
                 $('#playerX').text(`${scoresX}`);
                 $('.winning_text').text('Player X Wins!');
-                $('.winning_message').css('z-index','1');
-                $('.gameboard').css('opacity','0.4');
+                $('#myModal').css('display','block');
+                $('.buttons').css('display','none');
             }
     
         } // checking for O
@@ -71,8 +71,8 @@ $('.box').on('click', function () { // applies to all box, but will choose speci
                 scoresO +=1;
                 $('#playerO').text(`${scoresO}`);
                 $('.winning_text').text('Player O Wins!');
-                $('.winning_message').css('z-index','1');
-                $('.gameboard').css('opacity','0.4');
+                $('#myModal').css('display','block');
+                $('.buttons').css('display','none');
             } 
         } 
         let string = ""; 
@@ -83,8 +83,8 @@ $('.box').on('click', function () { // applies to all box, but will choose speci
                 draw += 1;
                 $('#draw').text(`${draw}`);
                 $('.winning_text').text("It's a Draw!");
-                $('.winning_message').css('z-index','1');
-                $('.gameboard').css('opacity','0.4');
+                $('#myModal').css('display','block');
+                $('.buttons').css('display','none');
             }
         }
     }
@@ -104,7 +104,7 @@ const winningCombos = [
     [2,4,6]
 ];
 
-$('.playAgain').on('click', function () {  
+$('.playAgain, .playAgain1').on('click', function () {  
     $('.box').empty();
     $('.winning_text').empty();
     $('.gameboard').css('opacity','1');
@@ -112,7 +112,7 @@ $('.playAgain').on('click', function () {
 })
 
 
-$('.reset').on('click', function () {
+$('.reset, .reset1').on('click', function () {
     let scoresX = 0;
     $('#playerX').text(`${scoresX}`);
     let scoresO = 0;
@@ -127,7 +127,27 @@ $('.reset').on('click', function () {
 })
 
 
+//----------------------- modal --------------------------//
+
+$('#modalB').on('click', function () {
+    $('#myModal').css('display','block');
+    $('.buttons').css('display','none');
+});
+
+$('.close, .playAgain1, .reset1').on('click', function () { // these three function removes modal box
+    $('#myModal').css('display','none');
+    $('.buttons').css('display','block');
+});
+
+
+
+
+
 
 
 });
+
+
+
+
 
