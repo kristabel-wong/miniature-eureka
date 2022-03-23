@@ -9,15 +9,12 @@
     <title>TIC TAC TOE</title>
 </head>
 <body> 
-    <h1 class="title">tic tac toe</h1>
+    <h1 class="title">TIC TAC TOE</h1>
     <!-- <h1>CHOOSE YOUR PLAYER</h1> -->
     
     
     <div class="gameboard">
 
-        <!-- <div class="box1">
-            <div class=""></div>
-        </div> -->
         <div class="box" id="0"></div>
         <div class="box" id="1"></div>
         <div class="box" id="2"></div>
@@ -28,15 +25,28 @@
         <div class="box" id="7"></div>
         <div class="box" id="8"></div>
         
-
     </div>
 
-    <h2><span id="X">X</span> or <span id="O">O</span>  </h2>
-    
+    <div class="tokens"> 
+        <div id="player1">
+            PLAYER
+            <span id="X">X</span>
+        </div>  
+        <div id="player2">
+            PLAYER
+            <span id="O">O</span> 
+        </div>
+    </div>
+
     <div class="winning_message">
-        <div class="winning_text"></div>
-        <button class="playAgain">Play Again</button>
+        <div class="winning_text"></div>    
     </div>
+
+    <div class="buttons">
+        <button class="playAgain">PLAY AGAIN</button>
+        <button class="reset">RESET</button>
+    </div>
+        
     
     <!-- for some reason i cannot put the scoreboard above the winning message as it screws with positioning...  -->
 
@@ -60,7 +70,7 @@
             
         </div>
         
-        <button class="reset">Reset</button>
+        
     </aside> 
 
 

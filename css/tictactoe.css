@@ -21,9 +21,34 @@ h1, h2 {
     font-weight: 100;
 }
 
-span {
-    font-size: 350%;
-    padding: 20px;
+
+.tokens {
+    margin: 0 auto;
+    position: relative;
+    top: -335px;
+    width: 850px;
+}
+
+#player1 {
+    float: left;
+    text-align: center;
+    width: 100px;
+    font-size: 150%;
+}
+
+#X {
+    font-size: 400%;
+}
+
+#player2 {
+    float: right;
+    text-align: center;
+    width: 100px;
+    font-size: 150%;
+}
+
+#O {
+    font-size: 400%;
 }
 
 /* ------------------ gameboard ------------------  */
@@ -55,7 +80,7 @@ span {
     margin: 0 auto;
     box-sizing: border-box;
     width: 600px;
-    height: 150px;
+    height: 60px;
     display: grid;
 
 }
@@ -79,11 +104,11 @@ span {
 
 /* ------------------ scoreboard ------------------  */
 
-aside {
+/* aside {
     float: left;
     position: relative;
     top: -550px;
-}
+} */
 
 .container {
     float: left;
@@ -105,20 +130,29 @@ aside {
 
 /* ------------------ buttons ------------------  */
 
+.buttons {
+    text-align: center; 
+    margin: 0 auto;
+    width: 210px;
+}
+
 .playAgain {
     margin: 0 auto;
-    width: 200px;
-    height: 80px;
-    position: relative;
-    top: -10px;
+    width: 100px;
+    height: 50px;
+    float: left;
+
 }
 
 .reset {
     margin: 0 auto;
     height: 50px;
     width: 80px;
-    position: absolute;
-    top: 200px;
-    left: 60px;
+    float: right;
 }
 
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    background-color: white;
+}

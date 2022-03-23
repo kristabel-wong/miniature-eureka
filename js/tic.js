@@ -52,10 +52,10 @@ $('.box').on('click', function () { // applies to all box, but will choose speci
             let c = winningCombos[i][2];
 
             if ($(`#${a}`).text() === "X" && $(`#${b}`).text() === "X" && $(`#${c}`).text() === "X" && $('.winning_text').text() === "") { // if the text of the id box matches
-                console.log('Player X Wins');
+                console.log('Player X Wins!');
                 scoresX +=1;
                 $('#playerX').text(`${scoresX}`);
-                $('.winning_text').text('Player X Wins');
+                $('.winning_text').text('Player X Wins!');
             }
     
         } // checking for O
@@ -65,10 +65,10 @@ $('.box').on('click', function () { // applies to all box, but will choose speci
             let c = winningCombos[i][2];
 
             if ($(`#${a}`).text() === "O" && $(`#${b}`).text() === "O" && $(`#${c}`).text() === "O" && $('.winning_text').text() === "") { // if the text of the id box matches
-                console.log('Player O Wins');
+                console.log('Player O Wins!');
                 scoresO +=1;
                 $('#playerO').text(`${scoresO}`);
-                $('.winning_text').text('Player O Wins');
+                $('.winning_text').text('Player O Wins!');
             } 
         } 
         let string = ""; 
