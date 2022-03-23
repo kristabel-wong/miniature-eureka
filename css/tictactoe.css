@@ -1,40 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
+
 body {
     width: 1200px;
     margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 400%;
+    margin: 50px 0 70px 0;
 }
 
 h1, h2 {
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
 }
 
 span {
-    font-size: 400%;
+    font-size: 350%;
     padding: 20px;
 }
 
-/* div {
-    
-} */
+/* ------------------ gameboard ------------------  */
 
 .gameboard {
     margin: 0 auto;
     box-sizing: border-box;
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns each 1 fraction of free space*/
     grid-template-rows: repeat(3, 1fr); 
-    grid-gap: 7px;
-    background-color: rgb(187, 187, 187);
+    grid-gap: 5px;
+    background-color: rgb(248, 205, 212);
 }
 
 .box {
     text-align: center;
-    line-height: 195px;
+    line-height: 163px;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    background-color: rgb(248, 205, 212);
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
 }
 
 .winning_message {
@@ -54,15 +68,6 @@ span {
     line-height: 60px;
 }
 
-.playAgain {
-    margin: 0 auto;
-    width: 200px;
-    height: 80px;
-    position: relative;
-    top: -10px;
-}
-
-
 .nought {
     height: 120px;
     width: 120px;
@@ -71,6 +76,9 @@ span {
     margin: 10px
 }
 
+
+/* ------------------ scoreboard ------------------  */
+
 aside {
     float: left;
     position: relative;
@@ -78,20 +86,16 @@ aside {
 }
 
 .container {
-    /* box-sizing: border-box; */
-    /* position: absolute;
-    top: 350px;
-    left: 300px; */
-    /* height: 130px; */
+    float: left;
     width: 200px;
-    border: 5px solid black;
-
+    border: 2px solid black;
+    padding-bottom: 5px;
 }
 
 .player {
     margin: 0 10px 10px 10px;
     font-size: 110%;
-    font-weight: bold;
+
 }
 
 .score {
@@ -99,7 +103,17 @@ aside {
 }
 
 
-.restart {
+/* ------------------ buttons ------------------  */
+
+.playAgain {
+    margin: 0 auto;
+    width: 200px;
+    height: 80px;
+    position: relative;
+    top: -10px;
+}
+
+.reset {
     margin: 0 auto;
     height: 50px;
     width: 80px;

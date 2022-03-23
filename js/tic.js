@@ -34,10 +34,10 @@ $('.box').on('click', function () { // applies to all box, but will choose speci
     } else if ( $(this).text() === ""){
 
         if (playerOTurn === true) {
-            $( this ).text("O").css('font-size', '800%');
+            $( this ).text("O").css('font-size', '750%');
             playerOTurn = false;
         } else {
-            $( this ).text("X").css('font-size', '800%');
+            $( this ).text("X").css('font-size', '750%');
             playerOTurn = true;
         }
     }
@@ -104,7 +104,7 @@ $('.playAgain').on('click', function () {
 })
 
 
-$('.restart').on('click', function () {
+$('.reset').on('click', function () {
     let scoresX = 0;
     $('#playerX').text(`${scoresX}`);
     let scoresO = 0;
