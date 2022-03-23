@@ -31,10 +31,18 @@
         <div id="player1">
             PLAYER
             <span id="X">X</span>
+            <div class="player">
+                Score: 
+                <div class="score" id="playerX"></div>
+            </div>
         </div>  
         <div id="player2">
             PLAYER
             <span id="O">O</span> 
+            <div class="player">
+                Score:
+                <div class="score" id="playerO"></div>
+            </div>
         </div>
     </div>
 
@@ -46,32 +54,18 @@
         <button class="playAgain">PLAY AGAIN</button>
         <button class="reset">RESET</button>
     </div>
-        
-    
-    <!-- for some reason i cannot put the scoreboard above the winning message as it screws with positioning...  -->
 
-    <aside class="scoreboard">
-        <div class="container">
-            <h1>Scoreboard</h1>
+    <div class="container">
+         
+        <div id="player1">
             <div class="player">
-                Player X scores: 
-                <div class="score" id="playerX"></div>
-            </div>
-            
-            <div class="player">
-                Draw:
+                Draw: 
                 <div class="score" id="draw"></div>
             </div>
-           
-            <div class="player">
-                Player O scores:
-                <div class="score" id="playerO"></div>
-            </div>
-            
-        </div>
+        </div>  
+                   
+    </div>
         
-        
-    </aside> 
 
 
 

@@ -56,6 +56,8 @@ $('.box').on('click', function () { // applies to all box, but will choose speci
                 scoresX +=1;
                 $('#playerX').text(`${scoresX}`);
                 $('.winning_text').text('Player X Wins!');
+                $('.winning_message').css('z-index','1');
+                $('.gameboard').css('opacity','0.4');
             }
     
         } // checking for O
@@ -69,6 +71,8 @@ $('.box').on('click', function () { // applies to all box, but will choose speci
                 scoresO +=1;
                 $('#playerO').text(`${scoresO}`);
                 $('.winning_text').text('Player O Wins!');
+                $('.winning_message').css('z-index','1');
+                $('.gameboard').css('opacity','0.4');
             } 
         } 
         let string = ""; 
@@ -79,6 +83,8 @@ $('.box').on('click', function () { // applies to all box, but will choose speci
                 draw += 1;
                 $('#draw').text(`${draw}`);
                 $('.winning_text').text("It's a Draw!");
+                $('.winning_message').css('z-index','1');
+                $('.gameboard').css('opacity','0.4');
             }
         }
     }
@@ -101,6 +107,8 @@ const winningCombos = [
 $('.playAgain').on('click', function () {  
     $('.box').empty();
     $('.winning_text').empty();
+    $('.gameboard').css('opacity','1');
+    $('.winning_message').css('z-index','-1');
 })
 
 
@@ -114,6 +122,8 @@ $('.reset').on('click', function () {
 
     $('.box').empty();
     $('.winning_text').empty();
+    $('.gameboard').css('opacity','1');
+    $('.winning_message').css('z-index','-1');
 })
 
 
