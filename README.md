@@ -20,5 +20,7 @@ Instructions
 
 Goodluck!
 
+## Screenshot
 
+![screenshot](screenshot.png)
 
